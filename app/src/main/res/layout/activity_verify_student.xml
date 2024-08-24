@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_green"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/green"
+            android:elevation="4dp"
+            app:title="Verify Student"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <!-- Institution Search AutoCompleteTextView -->
+        <AutoCompleteTextView
+            android:id="@+id/institutionInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter Institution Name"
+            android:textColor="@color/green"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.8" /> <!-- 80% width of parent -->
+
+        <!-- Student ID Input EditText -->
+        <EditText
+            android:id="@+id/regNumberInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Enter Student RegNumber"
+            android:textColor="@color/green"
+            android:textColorHint="@color/white"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/institutionInput"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.8" /> <!-- 80% width of parent -->
+        <EditText
+            android:id="@+id/SportInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Enter Sport Played"
+            android:textColor="@color/green"
+            android:textColorHint="@color/white"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/regNumberInput"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.8" /> <!-- 80% width of parent -->
+
+
+        <Button
+            android:id="@+id/CheckStudentBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green"
+            android:text="Check Student"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/SportInput"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.6" /> <!-- 60% width of parent -->
+
+        <!-- Student Details TextView -->
+        <TextView
+            android:id="@+id/studentDetailsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Student Details"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CheckStudentBtn"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.8" /> <!-- 80% width of parent -->
+
+        <ImageView
+            android:id="@+id/passportPhoto"
+            android:layout_width="330dp"
+            android:layout_height="203dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/studentDetailsTextView"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <TextView
+            android:id="@+id/titleTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/white"
+            android:text="Student National ID"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passportPhoto" />
+
+        <ImageView
+            android:id="@+id/studentIdPhoto"
+            android:layout_width="330dp"
+            android:layout_height="203dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView2"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.8"
+            tools:srcCompat="@drawable/id" /> <!-- 80% width of parent -->
+
+
+        <Button
+            android:id="@+id/loadPhotoButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/grey"
+            android:text="Load ID Photo"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/studentIdPhoto"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.6" /> <!-- 60% width of parent -->
+
+        <!-- Verify Button -->
+        <Button
+            android:id="@+id/verifyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/green"
+            android:text="Verify"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loadPhotoButton"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.6" /> <!-- 60% width of parent -->
+
+        <!-- Decline Button -->
+        <Button
+            android:id="@+id/declineButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/red"
+            android:text="Decline"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/verifyButton"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.6" /> <!-- 60% width of parent -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

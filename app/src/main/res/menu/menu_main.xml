@@ -1,0 +1,58 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="eu.tutorials.myappkusa.MainActivity">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/event_icon"
+            android:title="Events" />
+
+        <item
+            android:id="@+id/nav_results"
+            android:icon="@drawable/results_menu_icon"
+            android:title="Results" />
+
+        <item
+            android:id="@+id/nav_verification"
+            android:icon="@drawable/verification_menu_icon"
+            android:title="Verification" />
+
+
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item android:title="Profile">
+
+            <menu>
+
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/login_icon"
+                    android:title="Login" />
+
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/profile_icon"
+                    android:title="Profile" />
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout_icon"
+                    android:title="Logout" />
+
+            </menu>
+
+        </item>
+
+    </group>
+
+</menu>

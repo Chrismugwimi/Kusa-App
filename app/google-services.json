@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "233027569767",
+    "project_id": "my-app-kusa",
+    "storage_bucket": "my-app-kusa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233027569767:android:64e3b8e4e3b4e7cc52ecc2",
+        "android_client_info": {
+          "package_name": "eu.tutorials.myappkusa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGHuCVJdlLXPDcZ6d0XckbgExscywqC68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

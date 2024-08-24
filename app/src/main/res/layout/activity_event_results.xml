@@ -1,0 +1,164 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark_green"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/green"
+            app:title="Event Results"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+        <!-- Event Details Section -->
+        <TextView
+            android:id="@+id/eventDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Details"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_below="@id/toolbar"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/eventNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Name"
+            android:textColor="@color/green"
+            android:textColorHint="@color/white"
+            android:layout_below="@id/eventDetailsTitle"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/eventDateInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Date (dd/MM/yyyy)"
+            android:inputType="date"
+            android:textColor="@color/green"
+            android:textColorHint="@color/white"
+            android:layout_below="@id/eventNameInput"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/eventVenueInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Venue"
+            android:textColor="@color/green"
+            android:textColorHint="@color/white"
+            android:outlineAmbientShadowColor="@color/black"
+            android:layout_below="@id/eventDateInput"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/sportTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sport"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_below="@id/eventVenueInput"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/sportSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sportTitle"
+            android:layout_marginBottom="8dp"/>
+
+
+        <!-- Results Section -->
+        <TextView
+            android:id="@+id/resultsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Results"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_below="@id/sportSpinner"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/resultsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/resultsTitle"
+            android:layout_marginBottom="16dp">
+
+            <!-- Example Result Entry -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:outlineSpotShadowColor="@color/black"
+                android:layout_marginBottom="8dp">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/white"
+                    android:hint="Position"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/white"
+                    android:hint="University Name"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/white"
+                    android:hint="Points"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Add Result Button -->
+        <Button
+            android:id="@+id/addResultButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Result"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green"
+            android:layout_below="@id/resultsContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submitResultsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Results"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:layout_below="@id/addResultButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"/>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/icon_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyAppKusa"
+        tools:targetApi="31">
+        <activity
+            android:name=".Tennis_results"
+            android:exported="false" />
+        <activity
+            android:name=".Volleyball_results"
+            android:exported="false" />
+        <activity
+            android:name=".Athletics_results"
+            android:exported="false" />
+        <activity
+            android:name=".Netball_results"
+            android:exported="false" />
+        <activity
+            android:name=".Hockey_results"
+            android:exported="false" />
+        <activity
+            android:name=".Handball_results"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Teams"
+            android:exported="false" />
+        <activity
+            android:name=".Student_draws"
+            android:exported="false" />
+        <activity
+            android:name=".Basketball_results"
+            android:exported="false" />
+        <activity
+            android:name=".Event_Results"
+            android:exported="false" />
+        <activity
+            android:name=".Football_results"
+            android:exported="false" />
+        <activity
+            android:name=".Verification"
+            android:exported="false" />
+        <activity
+            android:name=".Verification_Status"
+            android:exported="false" />
+        <activity
+            android:name=".Verify_Student"
+            android:exported="false" />
+        <activity
+            android:name=".Badminton_Officer"
+            android:exported="false" />
+        <activity
+            android:name=".Table_Tennis_Officer"
+            android:exported="false" />
+        <activity
+            android:name=".Tennis_Officer"
+            android:exported="false" />
+        <activity
+            android:name=".Volleyball_Officer"
+            android:exported="false" />
+        <activity
+            android:name=".Athletics_Officer"
+            android:exported="false" />
+        <activity
+            android:name=".Netball_Officer"
+            android:exported="false" />
+        <activity
+            android:name=".Hockey_Officer"
+            android:exported="false" />
+        <activity
+            android:name=".Handball_Officer"
+            android:exported="false" />
+        <activity
+            android:name=".Basketball_Officer"
+            android:exported="false" />
+        <activity
+            android:name=".Officer_events"
+            android:exported="false" />
+        <activity
+            android:name=".Officer_upcoming_events"
+            android:exported="false" />
+        <activity
+            android:name=".Draws"
+            android:exported="false" />
+        <activity
+            android:name=".Officer_id"
+            android:exported="false" />
+        <activity
+            android:name=".Football_Officer"
+            android:exported="false" />
+        <activity
+            android:name=".Officer_Results"
+            android:exported="false" />
+        <activity
+            android:name=".Officer_Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Officer_SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".Results"
+            android:exported="false" />
+        <activity
+            android:name=".submit_id"
+            android:exported="false" />
+        <activity
+            android:name=".upcoming_events"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MyAppKusa">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
